@@ -1,6 +1,6 @@
 def primes(n):
     if not isinstance(n, int):
-        raise ValueError("Only integers expected")
+        raise ValueError("Only integers expected as arguments")
     if n == 2:
         return [2]
     elif n < 2:
