@@ -13,7 +13,7 @@ class TestPrime(TestCase):
     def test_requires_integer_as_argument(self):
         with self.assertRaises(Exception) as context:
             primes("23")
-        self.assertTrue("Only integers expected" in context.exception)
+        self.assertTrue("Only integers expected as arguments" in context.exception)
 
     def test_returns_prime_numbers_less_or_equal_than_n(self):
         n = 13
