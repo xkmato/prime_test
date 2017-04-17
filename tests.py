@@ -21,8 +21,8 @@ class TestPrime(TestCase):
 
     def test_returns_prime_numbers(self):
         self.assertListEqual([2, 3, 5, 7, 11, 13], primes(13))
-        self.assertListEqual([2, 3, 5, 7, 11, 17], primes(17))
-        self.assertListEqual([2, 3, 5, 7, 11, 17], primes(18))
+        self.assertListEqual([2, 3, 5, 7, 11, 13, 17], primes(17))
+        self.assertListEqual([2, 3, 5, 7, 11, 13, 17], primes(18))
 
 
 if __name__ == '__main__':
