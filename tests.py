@@ -3,17 +3,21 @@ from prime import primes
 
 
 class TestPrime(TestCase):
-    def returns_empty_list_when_n_is_less_than_2(self):
+    def test_returns_empty_list_when_n_is_less_than_2(self):
         self.assertEquals([], primes(1))
         self.assertEquals([], primes(-1))
 
-    def returns_list_with_two_when_n_is_two(self):
+    def test_returns_list_with_two_when_n_is_two(self):
         self.assertEquals([2], primes(2))
 
-    def requires_integer_as_argument(self):
+    def test_requires_integer_as_argument(self):
         with self.assertRaises(Exception) as context:
             primes("23")
         self.assertTrue("Only integers expected" in context.exception)
+
+    def test_returns_prime_numbers_less_or_equal_than_n(self):
+        n = 13
+        self.assertLessEqual(max(primes(n)), n)
 
     def test_returns_prime_numbers(self):
         self.assertListEqual([2, 3, 5, 7, 11, 13], primes(13))
