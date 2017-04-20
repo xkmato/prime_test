@@ -1,18 +1,18 @@
-def primes(n):
-    if not isinstance(n, int):
+def primes(number):
+    if not isinstance(number, int):
         raise ValueError("Only integers expected as arguments")
-    if n == 2:
+    if number == 2:
         return [2]
-    elif n < 2:
+    elif number < 2:
         return []
-    numbers = range(3, n + 1, 2)
-    root_n = n ** 0.5
-    mid = (n + 1) / 2 - 1
+    numbers = [x for x in range(3, number + 1, 2)]
+    root_n = number ** 0.5
+    mid = (number + 1) / 2 - 1
     x = 0
     y = 3
     while y <= root_n:
         if numbers[x]:
-            z = (y * y - 3) / 2
+            z = (y * y - 3) // 2
             numbers[z] = 0
             while z < mid:
                 numbers[z] = 0
