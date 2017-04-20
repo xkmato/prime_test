@@ -6,11 +6,11 @@ def primes(number):
     elif number < 2:
         return []
     numbers = [x for x in range(3, number + 1, 2)]
-    root_n = number ** 0.5
+    square_root_number = number ** 0.5
     mid = (number + 1) / 2 - 1
     x = 0
     y = 3
-    while y <= root_n:
+    while y <= square_root_number:
         if numbers[x]:
             z = (y * y - 3) // 2
             numbers[z] = 0
